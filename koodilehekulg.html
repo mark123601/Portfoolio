@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Abistavad Asjad - Loov Professionaal</title>
+    <meta name="description" content="Abistavad lingid ja ressursid IT jaoks">
+    <meta name="keywords" content="IT, abistavad, lingid, ressursid">
+    
+    <meta property="og:title" content="Abistavad Asjad - Loov Professionaal">
+    <meta property="og:description" content="Abistavad lingid ja ressursid IT jaoks">
+    
+    <meta name="twitter:title" content="Abistavad Asjad - Loov Professionaal">
+    <meta name="twitter:description" content="Abistavad lingid ja ressursid IT jaoks">
+    
+    <meta name="google-site-verification" content="L7gjPSlhc4rs_Kj7KzRjx4UMJ1YwRpG8gIzLeZ7ydDU">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #f3f4f6;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+        }
+    }
+
+    @layer base {
+        body {
+            @apply bg-white text-[var(--text-primary)] font-sans;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            @apply font-bold;
+        }
+    }
+
+    @layer components {
+        .btn {
+            @apply px-6 py-3 rounded-lg font-medium transition-all duration-300;
+        }
+        
+        .btn-primary {
+            @apply bg-[var(--primary-color)] text-white hover:opacity-90;
+        }
+        
+        .btn-outline {
+            @apply border-2 border-[var(--primary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-white;
+        }
+        
+        .section-title {
+            @apply text-4xl font-bold text-center mb-12;
+        }
+    }
+
+    @layer utilities {
+        .text-gradient {
+            @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+        }
+    }
+    </style>
+
+</head>
+<body>
+<body>
+    <div id="header-root"></div>
+    <div class="container mx-auto px-6 py-20">
+        <h1 class="text-4xl font-bold text-center mb-12">Abistavad Asjad</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold mb-4">Windowsi seadistamine</h2>
+                <h3 class="text-lg font-semibold mb-2">Driver allalaadimine</h3>
+                <ul class="space-y-2">
+                    <li><a href="https://www.nvidia.com/en-us/drivers/" class="text-blue-600 hover:underline">Nvidia drivers</a></li>
+                    <li><a href="https://www.amd.com/en-us/support/download/drivers.html" class="text-blue-600 hover:underline">Amd drivers</a></li>
+                    <li><a href="https://www.intel.com/content/www/us/en/download-center/home.html" class="text-blue-600 hover:underline">Intel drivers</a></li>
+                </ul>
+                <h3 class="text-lg font-semibold mb-2 mt-4">Vali oma äppid</h3>
+                <ul class="space-y-2">
+                    <li><a href="https://ninite.com/" class="text-blue-600 hover:underline">kõik valid ise ninite</a></li>
+                </ul>
+                <h3 class="text-lg font-semibold mb-2 mt-4">Windows 10/11</h3>
+                <ul class="space-y-2">
+                    <li><a href="https://www.microsoft.com/en-us/software-download/windows10" class="text-blue-600 hover:underline">Win 10 allalaadimine</a></li>
+                    <li><a href="https://www.microsoft.com/en-us/software-download/windows11" class="text-blue-600 hover:underline">Win 11 allalaadimine</a></li>
+                    <li><a href="https://www.microsoft.com/en-us/windows/compare-windows-11-home-vs-pro-versions#tabs1-1" class="text-blue-600 hover:underline">Win 10/11 võrdluse leht</a></li>
+                    <li><a href="https://www.microsoft.com/en-us/windows/windows-11-specifications#table1" class="text-blue-600 hover:underline">Win 11 spetsifikatsioonid</a></li>
+                </ul>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold mb-4">Linux</h2>
+                <h3 class="text-lg font-semibold mb-2">Ubuntu</h3>
+                <ul class="space-y-2">
+                    <li><a href="https://ubuntu.com/download/desktop" class="text-blue-600 hover:underline">Ubuntu allalaadimine</a></li>
+                </ul>
+                <h3 class="text-lg font-semibold mb-2 mt-4">Linux Mint</h3>
+                <ul class="space-y-2">
+                    <li><a href="https://linuxmint.com/download.php" class="text-blue-600 hover:underline">Linux Mint allalaadimine</a></li>
+                </ul>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold mb-4">Virtuaalkeskkond</h2>
+                <ul class="space-y-2">
+                    <li><a href="https://www.virtualbox.org/" class="text-blue-600 hover:underline">VirtualBox</a></li>
+                    <li><a href="https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion" class="text-blue-600 hover:underline">VMware Workstation</a></li>
+                    <li><a href="https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/install-hyper-v?tabs=powershell&pivots=windows" class="text-blue-600 hover:underline">Hyper-V</a></li>
+                </ul>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold mb-4">IT-terminid ja sõnastikud</h2>
+                <ul class="space-y-2">
+                    <li><a href="https://techterms.com/" class="text-blue-600 hover:underline">TechTerms</a></li>
+                    <li><a href="https://arhiiv.eki.ee/dict/its/" class="text-blue-600 hover:underline">Eki</a></li>
+                </ul>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold mb-4">Abistavad foorumid</h2>
+                <ul class="space-y-2">
+                    <li><a href="https://www.hinnavaatlus.ee/" class="text-blue-600 hover:underline">hinnavaatlus</a></li>
+                    <li><a href="https://itmaailm.ee/category/technology/" class="text-blue-600 hover:underline">itmaailm</a></li>
+                </ul>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <h2 class="text-2xl font-bold mb-4">E-kursus</h2>
+                <ul class="space-y-2">
+                    <li><a href="https://www.netacad.com/" class="text-blue-600 hover:underline">netacad</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="footer-root"></div>
+    <script type="text/babel" src="utils/translations.js"></script>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script>
+        ReactDOM.render(<Header />, document.getElementById('header-root'));
+        ReactDOM.render(<Footer />, document.getElementById('footer-root'));
+    </script>
+</body>
+
+</body>
+</html>
