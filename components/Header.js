@@ -28,7 +28,8 @@ function Header() {
         about: 'Minust',
         skills: 'Oskused',
         education: 'Haridus',
-        help: 'Abistavad',
+        documents: 'Dokumendid',
+        help: 'IT Linkid',
         contact: 'Kontakt'
       },
       en: {
@@ -37,6 +38,7 @@ function Header() {
         about: 'About',
         skills: 'Skills',
         education: 'Education',
+        documents: 'Documents',
         help: 'Helpful',
         contact: 'Contact'
       }
@@ -53,6 +55,7 @@ function Header() {
               <button onClick={() => scrollToSection('about')} className="hover:text-[var(--primary-color)] transition-colors">{t[language].about}</button>
               <button onClick={() => scrollToSection('skills')} className="hover:text-[var(--primary-color)] transition-colors">{t[language].skills}</button>
               <a href="education.html" className="hover:text-[var(--primary-color)] transition-colors">{t[language].education}</a>
+              <a href="documents.html" className="hover:text-[var(--primary-color)] transition-colors">{t[language].documents}</a>
               <a href="koodilehekulg.html" className="hover:text-[var(--primary-color)] transition-colors">{t[language].help}</a>
               <button onClick={() => scrollToSection('contact')} className="hover:text-[var(--primary-color)] transition-colors">{t[language].contact}</button>
               <button 
@@ -74,6 +77,7 @@ function Header() {
               <button onClick={() => scrollToSection('about')} className="block w-full text-left py-2 hover:text-[var(--primary-color)]">{t[language].about}</button>
               <button onClick={() => scrollToSection('skills')} className="block w-full text-left py-2 hover:text-[var(--primary-color)]">{t[language].skills}</button>
               <a href="education.html" className="block w-full text-left py-2 hover:text-[var(--primary-color)]">{t[language].education}</a>
+              <a href="documents.html" className="block w-full text-left py-2 hover:text-[var(--primary-color)]">{t[language].documents}</a>
               <a href="koodilehekulg.html" className="block w-full text-left py-2 hover:text-[var(--primary-color)]">{t[language].help}</a>
               <button onClick={() => scrollToSection('contact')} className="block w-full text-left py-2 hover:text-[var(--primary-color)]">{t[language].contact}</button>
               <button 

@@ -13,7 +13,7 @@ function Hero() {
     const t = translations[language].hero;
 
     return (
-      <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50 pt-20" data-name="hero" data-file="components/Hero.js">
+      <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50 pt-20 relative" data-name="hero" data-file="components/Hero.js">
         <div style={{"paddingTop":"0px","paddingRight":"24px","paddingBottom":"0px","paddingLeft":"24px","marginTop":"0px","marginRight":"80px","marginBottom":"100px","marginLeft":"80px","fontSize":"16px","color":"rgb(17, 24, 39)","backgroundColor":"rgba(0, 0, 0, 0)","textAlign":"center","fontWeight":"400","objectFit":"fill","display":"block","position":"static","top":"auto","left":"auto","right":"auto","bottom":"auto"}} className="container mx-auto px-6 text-center">
           <div className="mb-8">
             <div className="w-32 h-32 mx-auto rounded-full bg-[var(--primary-color)] flex items-center justify-center text-white text-5xl font-bold mb-6">MG</div>
@@ -33,6 +33,10 @@ function Hero() {
               {t.contact}
             </button>
           </div>
+        </div>
+        
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <span className="icon-chevron-down text-3xl text-[var(--primary-color)]"></span>
         </div>
       </section>
     );

@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Abistavad Asjad - Loov Professionaal</title>
-    <meta name="description" content="Abistavad lingid ja ressursid IT jaoks">
-    <meta name="keywords" content="IT, abistavad, lingid, ressursid">
+    <title>IT linkid  - Loov Professionaal</title>
+    <meta name="description" content="IT linkid lingid ja ressursid IT jaoks">
+    <meta name="keywords" content="IT, IT linkid, lingid, ressursid">
     
-    <meta property="og:title" content="Abistavad Asjad - Loov Professionaal">
-    <meta property="og:description" content="Abistavad lingid ja ressursid IT jaoks">
+    <meta property="og:title" content="IT linkid  - Loov Professionaal">
+    <meta property="og:description" content="IT linkid lingid ja ressursid IT jaoks">
     
-    <meta name="twitter:title" content="Abistavad Asjad - Loov Professionaal">
-    <meta name="twitter:description" content="Abistavad lingid ja ressursid IT jaoks">
+    <meta name="twitter:title" content="IT linkid  - Loov Professionaal">
+    <meta name="twitter:description" content="IT linkid lingid ja ressursid IT jaoks">
     
-    <meta name="google-site-verification" content="L7gjPSlhc4rs_Kj7KzRjx4UMJ1YwRpG8gIzLeZ7ydDU">
-
     <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
     <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
@@ -69,10 +67,15 @@
 
 </head>
 <body>
-<body>
     <div id="header-root"></div>
-    <div class="container mx-auto px-6 py-20">
-        <h1 class="text-4xl font-bold text-center mb-12">Abistavad Asjad</h1>
+    <script type="text/babel" src="utils/translations.js"></script>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel">
+      const headerRoot = ReactDOM.createRoot(document.getElementById('header-root'));
+      headerRoot.render(<Header />);
+    </script>
+    <div class="container mx-auto px-6 pt-32">
+        <h1 class="text-4xl font-bold text-center mb-12">IT linkid </h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="bg-gray-50 p-6 rounded-lg">
                 <h2 class="text-2xl font-bold mb-4">Windowsi seadistamine</h2>
@@ -121,7 +124,7 @@
                 </ul>
             </div>
             <div class="bg-gray-50 p-6 rounded-lg">
-                <h2 class="text-2xl font-bold mb-4">Abistavad foorumid</h2>
+                <h2 class="text-2xl font-bold mb-4">IT linkid foorumid</h2>
                 <ul class="space-y-2">
                     <li><a href="https://www.hinnavaatlus.ee/" class="text-blue-600 hover:underline">hinnavaatlus</a></li>
                     <li><a href="https://itmaailm.ee/category/technology/" class="text-blue-600 hover:underline">itmaailm</a></li>
