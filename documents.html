@@ -17,39 +17,10 @@
     <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
     <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <link href="dist/tailwind.css" rel="stylesheet">
 
-    <style type="text/tailwindcss">
-    @layer theme {
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #f3f4f6;
-            --text-primary: #111827;
-            --text-secondary: #6b7280;
-        }
-    }
-
-    @layer base {
-        body {
-            @apply bg-white text-[var(--text-primary)] font-sans;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            @apply font-bold;
-        }
-    }
-
-    @layer components {
-        .btn {
-            @apply px-6 py-3 rounded-lg font-medium transition-all duration-300;
-        }
-        
-        .btn-primary {
-            @apply bg-[var(--primary-color)] text-white hover:opacity-90;
-        }
-    }
-    </style>
+    <!-- Styles moved to dist/tailwind.css -->
 
 </head>
 <body>
@@ -94,7 +65,7 @@
         const documents = {
           cv: {
             title: t.cv,
-            url: 'dokumendid/CVKeskus_Mark_Grintšin_2827935 (1).pdf'
+            url: 'dokumendid/cv_Mark_IT25.pdf'
           },
           motivation: {
             title: t.motivation,

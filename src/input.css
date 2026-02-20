@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Copied project-specific global styles and helpers */
+
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #f3f4f6;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --header-toggle-icon-size: 6rem;
+  --hero-down-arrow-size: 1.875rem;
+}
+
+.btn {
+   padding: 0.75rem 1.5rem;
+   border-radius: 0.5rem;
+   font-weight: 500;
+   transition: all 0.3s ease;
+   display: inline-block;
+   text-align: center;
+}
+
+.btn-primary {
+   background: var(--primary-color);
+   color: #ffffff;
+}
+.btn-primary:hover { opacity: 0.9; }
+
+.btn-outline {
+   border: 2px solid var(--primary-color);
+   color: var(--primary-color);
+   background: transparent;
+}
+.btn-outline:hover {
+   background: var(--primary-color);
+   color: #ffffff;
+}
+
+.section-title {
+   font-size: 2.25rem;
+   font-weight: 700;
+   text-align: center;
+   margin-bottom: 3rem;
+}
+
+.text-gradient {
+   background: linear-gradient(90deg, #2563eb 0%, #7c3aed 100%);
+   -webkit-background-clip: text;
+   background-clip: text;
+   color: transparent;
+}
+
+.header-toggle-icon { font-size: var(--header-toggle-icon-size); line-height: 1; }
+.hero-down-arrow { font-size: var(--hero-down-arrow-size); line-height: 1; color: var(--primary-color); }
+
+.hidden { display: none !important; }
+.md\:flex { display: none !important; }
+.md\:hidden { display: block !important; }
+
+@media (min-width: 768px) {
+   .md\:flex { display: flex !important; }
+   .md\:hidden { display: none !important; }
+}
+
+.container { max-width: 1100px; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem; }
+
+header[data-name="header"] { position: fixed; top: 0; left: 0; right: 0; width: 100%; background: #ffffff; box-shadow: 0 1px 2px rgba(0,0,0,0.06); z-index: 50; }
+header[data-name="header"] nav { display: block; }
+header[data-name="header"] .container { display: flex; align-items: center; justify-content: flex-end; padding-top: 1rem; padding-bottom: 1rem; }
+
+/* Position the brand at the left edge of the viewport and vertically center it */
+header[data-name="header"] .header-brand { position: absolute; left: 1.5rem; top: 50%; transform: translateY(-50%); z-index: 60; }
+
+.nav-links { display: flex; gap: 1.5rem; align-items: center; }
+
+.min-h-screen { min-height: 100vh; }
+.pt-20 { padding-top: 5rem; }

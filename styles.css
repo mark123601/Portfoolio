@@ -1,0 +1,112 @@
+/* Global CSS variables and notes for Portfoolio
+   - Put all globally-used CSS variables here so they're managed in one place.
+   - Each variable below has a short note explaining its purpose. */
+
+:root {
+  /* Primary brand color used throughout the site (buttons, highlights) */
+  --primary-color: #2563eb;
+
+  /* Light background / secondary surface color */
+  --secondary-color: #f3f4f6;
+
+  /* Main text color */
+  --text-primary: #111827;
+
+  /* Secondary text color (muted) */
+  --text-secondary: #6b7280;
+
+  /* Header/menu toggle icon size
+     - Used by `components/Header.js` as `var(--header-toggle-icon-size)`.
+     - Change this to make the mobile menu icon larger/smaller globally. */
+  --header-toggle-icon-size: 6rem;
+
+  /* Hero down-arrow size
+     - Used by `components/Hero.js` as `var(--hero-down-arrow-size)`.
+     - Default fallback equals Tailwind's `text-3xl` (1.875rem). */
+  --hero-down-arrow-size: 1.875rem;
+
+  /* Additional global variables can be added below with a short note. */
+}
+
+/* Optional helper class examples (uncomment if needed):
+.header-toggle-icon { line-height: 1; }
+.hero-down-arrow  { line-height: 1; }
+*/
+
+/* Component/helper classes moved from HTML @layer blocks */
+.btn {
+   padding: 0.75rem 1.5rem;
+   border-radius: 0.5rem;
+   font-weight: 500;
+   transition: all 0.3s ease;
+   display: inline-block;
+   text-align: center;
+}
+
+.btn-primary {
+   background: var(--primary-color);
+   color: #ffffff;
+}
+.btn-primary:hover { opacity: 0.9; }
+
+.btn-outline {
+   border: 2px solid var(--primary-color);
+   color: var(--primary-color);
+   background: transparent;
+}
+.btn-outline:hover {
+   background: var(--primary-color);
+   color: #ffffff;
+}
+
+.section-title {
+   font-size: 2.25rem;
+   font-weight: 700;
+   text-align: center;
+   margin-bottom: 3rem;
+}
+
+.text-gradient {
+   background: linear-gradient(90deg, #2563eb 0%, #7c3aed 100%);
+   -webkit-background-clip: text;
+   background-clip: text;
+   color: transparent;
+}
+
+/* Ensure header toggle and hero arrow use CSS vars defined above */
+.header-toggle-icon { font-size: var(--header-toggle-icon-size); line-height: 1; }
+.hero-down-arrow { font-size: var(--hero-down-arrow-size); line-height: 1; color: var(--primary-color); }
+
+/* Basic layout helpers (fallbacks when Tailwind utilities are not present)
+    These ensure header, container and simple responsive show/hide behave
+    similarly across pages even if the Tailwind CDN didn't generate utilities. */
+
+/* Show/hide helpers used in components (class names contain colon, escape in CSS) */
+.hidden { display: none !important; }
+.md\:flex { display: none !important; }
+.md\:hidden { display: block !important; }
+
+@media (min-width: 768px) {
+   .md\:flex { display: flex !important; }
+   .md\:hidden { display: none !important; }
+}
+
+/* Container like Tailwind's container + mx-auto + px-6 */
+.container { max-width: 1100px; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem; }
+
+/* Header basics */
+header[data-name="header"] { position: fixed; top: 0; left: 0; right: 0; width: 100%; background: #ffffff; box-shadow: 0 1px 2px rgba(0,0,0,0.06); z-index: 50; }
+header[data-name="header"] nav { display: block; }
+header[data-name="header"] .container { display: flex; align-items: center; justify-content: flex-end; padding-top: 1rem; padding-bottom: 1rem; }
+
+/* Position the brand at the left edge of the viewport and vertically center it */
+header[data-name="header"] .header-brand { position: absolute; left: 1.5rem; top: 50%; transform: translateY(-50%); z-index: 60; }
+
+/* Simple nav link grouping for when Tailwind classes are missing */
+.nav-links { display: flex; gap: 1.5rem; align-items: center; }
+
+/* Basic hero spacing */
+.min-h-screen { min-height: 100vh; }
+.pt-20 { padding-top: 5rem; }
+
+

@@ -20,20 +20,7 @@ function Footer() {
               </ul>
             </div>
             
-            <div>
-              <h3 className="text-xl font-bold mb-4">Ühenda</h3>
-              <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[var(--primary-color)] transition-colors">
-                  <div className="icon-github text-xl"></div>
-                </a>
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[var(--primary-color)] transition-colors">
-                  <div className="icon-linkedin text-xl"></div>
-                </a>
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[var(--primary-color)] transition-colors">
-                  <div className="icon-twitter text-xl"></div>
-                </a>
-              </div>
-            </div>
+            
           </div>
           
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">

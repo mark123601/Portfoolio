@@ -36,7 +36,11 @@ function Hero() {
         </div>
         
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <span className="icon-chevron-down text-3xl text-[var(--primary-color)]"></span>
+          {/* NOTE (HERO-DOWN-ARROW): Size controlled by `--hero-down-arrow-size` in styles.css */}
+          <span
+            className="icon-chevron-down hero-down-arrow"
+            data-change-note="HERO-DOWN-ARROW"
+          ></span>
         </div>
       </section>
     );

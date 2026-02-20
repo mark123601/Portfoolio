@@ -46,10 +46,9 @@ function Header() {
 
     return (
       <header className="fixed top-0 w-full bg-white shadow-sm z-50" data-name="header" data-file="components/Header.js">
-        <nav className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-[var(--primary-color)]">{t[language].brand}</div>
-            
+        <div className="header-brand text-2xl font-bold text-[var(--primary-color)]">{t[language].brand}</div>
+        <nav className="w-full px-6 py-4">
+          <div className="flex items-center justify-end w-full">
             <div className="hidden md:flex space-x-8 items-center">
               <button onClick={() => scrollToSection('home')} className="hover:text-[var(--primary-color)] transition-colors">{t[language].home}</button>
               <button onClick={() => scrollToSection('about')} className="hover:text-[var(--primary-color)] transition-colors">{t[language].about}</button>
@@ -66,8 +65,19 @@ function Header() {
               </button>
             </div>
 
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden">
-              <div className={`icon-${isMenuOpen ? 'x' : 'menu'} text-2xl`}></div>
+            {/* === HEADER TOGGLE ICON (CHANGE HERE) ===
+                This is the menu toggle button shown on small screens.
+                To change its size edit the CSS variable
+                `--header-toggle-icon-size` in the `:root` of your HTML files
+                (index.html, documents.html, education.html, koodilehekulg.html),
+                or change the fallback value in the inline `style` below.
+                Search for "HEADER-TOGGLE-ICON" or `--header-toggle-icon-size`.
+            */}
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden" aria-label="Toggle menu">
+              <div
+                className={`icon-${isMenuOpen ? 'x' : 'menu'} header-toggle-icon`}
+                data-change-note="HEADER-TOGGLE-ICON"
+              ></div>
             </button>
           </div>
 
