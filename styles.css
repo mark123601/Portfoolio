@@ -23,7 +23,7 @@
   /* Hero down-arrow size
      - Used by `components/Hero.js` as `var(--hero-down-arrow-size)`.
      - Default fallback equals Tailwind's `text-3xl` (1.875rem). */
-  --hero-down-arrow-size: 1.875rem;
+   --hero-down-arrow-size: 3rem;
 
   /* Additional global variables can be added below with a short note. */
 }

@@ -10,7 +10,7 @@
   --text-primary: #111827;
   --text-secondary: #6b7280;
   --header-toggle-icon-size: 6rem;
-  --hero-down-arrow-size: 1.875rem;
+   --hero-down-arrow-size: 3rem;
 }
 
 .btn {
@@ -54,6 +54,14 @@
 
 .header-toggle-icon { font-size: var(--header-toggle-icon-size); line-height: 1; }
 .hero-down-arrow { font-size: var(--hero-down-arrow-size); line-height: 1; color: var(--primary-color); }
+
+/* Mobile adjustments: make the arrow a bit smaller so it stays centered and doesn’t overflow */
+@media (max-width: 640px) {
+   .hero-down-arrow {
+      /* Override the custom property for small screens */
+      font-size: 2rem;
+   }
+}
 
 .hidden { display: none !important; }
 .md\:flex { display: none !important; }

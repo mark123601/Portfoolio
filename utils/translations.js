@@ -10,7 +10,7 @@ const translations = {
     },
     about: {
       title: 'Minust',
-      intro: 'Ma õpin väga hästi ja kiiresti. Olen kiire õppja  ',
+      intro: 'Olen motiveeritud ja kiiresti õppiv arendushuviline, kellele meeldib omandada uusi teadmisi ning arendada oma tehnilisi oskusi. Mind huvitab eriti veebiarendus ning lahenduste loomine, mis on nii visuaalselt selged kui ka tehniliselt toimivad.\n\nMinu eesmärk on pidev areng ning praktiliste kogemuste kogumine. Õpin järjepidevalt uusi tehnoloogiaid ning hoian end kursis valdkonna uuemate suundadega, et arendada kvaliteetseid ja kaasaegseid lahendusi.\n\nHindan läbimõeldud lahendusi, puhast koodi ja kasutajasõbralikku disaini.',
       description: 'Minu lähenemisviis ühendab tehnilise oskustöö ja loomingulise mõtlemisega, et pakkuda projekte, mis mitte ainult ei näe head välja, vaid toimivad ka laitmatult. Usun pidevasse õppimisse ja kursis püsimisse tööstuse viimasete trendidega.',
       yearsLabel: 'aastat',
       experienceLabel: 'Kogemust',
@@ -79,6 +79,14 @@ const translations = {
       projects: 'Projektid',
       contact: 'Kontakt',
       copyright: '2025 Portfoolio. Kõik õigused kaitstud.'
+    },
+    itLinks: {
+      title: 'IT Lingid',
+      items: [
+        { name: 'MDN veebidokumendid', url: 'https://developer.mozilla.org' },
+        { name: 'W3Schools', url: 'https://www.w3schools.com' },
+        { name: 'Stack Overflow', url: 'https://stackoverflow.com' }
+      ]
     }
   },
   en: {
@@ -92,7 +100,7 @@ const translations = {
     },
     about: {
       title: 'About Me',
-      intro: 'I am a highly dedicated and hardworking professional who loves creating quality digital solutions.',
+      intro: 'I am a motivated and fast-learning development enthusiast who enjoys acquiring new knowledge and developing technical skills. I am particularly interested in web development and creating solutions that are both visually clear and technically functional.\n\nMy goal is continuous growth and gaining practical experience. I consistently learn new technologies and stay up-to-date with the latest industry trends to develop high-quality and modern solutions.\n\nI value well-thought-out solutions, clean code, and user-friendly design.',
       description: 'My approach combines technical expertise with creative thinking to deliver projects that not only look great but also perform flawlessly. I believe in continuous learning and staying up-to-date with the latest industry trends.',
       yearsLabel: 'Years',
       experienceLabel: 'Experience',
@@ -161,6 +169,14 @@ const translations = {
       projects: 'Projects',
       contact: 'Contact',
       copyright: '2025 Portfolio. All rights reserved.'
+    },
+    itLinks: {
+      title: 'IT Links',
+      items: [
+        { name: 'MDN Web Docs', url: 'https://developer.mozilla.org' },
+        { name: 'W3Schools', url: 'https://www.w3schools.com' },
+        { name: 'Stack Overflow', url: 'https://stackoverflow.com' }
+      ]
     }
   }
 };
