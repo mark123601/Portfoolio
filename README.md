@@ -9,6 +9,7 @@ Last updated: 10 October 2026
 ## Main page
 
 - English and Estonian content with a language switch and a saved language preference.
+- A dedicated About me section with practical experience, learning goals and placement availability.
 - PC repair, a Minecraft server project with a friend, and PowerShell school coursework.
 - Skills described through practical experience rather than percentage scores.
 - Education, contact links and downloadable English CV files in PDF and Word formats.

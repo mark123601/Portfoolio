@@ -78,6 +78,15 @@
     .section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:35px}
     .section-heading h2,.section-title{font-size:36px;letter-spacing:-.045em;line-height:1.15;font-weight:500;margin:12px 0 0}
     .section-heading>p{max-width:325px;margin:0;font-size:13px;line-height:1.7;color:var(--muted)}
+    .about-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:65px;align-items:start}
+    .about-story p{font-size:15px;line-height:1.85;color:var(--muted);max-width:570px;margin:22px 0 0}
+    .about-card{background:#eaf0e2;border:1px solid #d8e1d2;border-radius:var(--round);padding:28px}
+    .about-card h3{font-size:19px;letter-spacing:-.025em;font-weight:500;margin:0 0 20px}
+    .about-point{padding:17px 0;border-top:1px solid #d0dbc9}
+    .about-point:last-child{padding-bottom:0}
+    .about-point h4{font-size:12px;margin:0 0 7px}
+    .about-point p{font-size:12px;line-height:1.75;color:var(--muted);margin:0}
+    @media(max-width:790px){.about-layout{grid-template-columns:1fr;gap:26px}.about-story p{max-width:600px}.about-card{padding:24px}}
     .project-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;align-items:start}
     .project{background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden}
     .project-visual{height:168px;display:flex;justify-content:center;align-items:center;position:relative;overflow:hidden}
@@ -148,6 +157,7 @@
       <a class="brand" href="#main" aria-label="Mark Grintšin home"><span class="monogram">MG</span><span>Mark Grintšin</span></a>
       <div class="header-controls">
         <nav id="navigation" aria-label="Main navigation">
+          <a href="#about" data-i18n="navAbout">About me</a>
           <a href="#projects" data-i18n="navProjects">Projects</a>
           <a href="#skills" data-i18n="navSkills">Skills</a>
           <a href="#education" data-i18n="navEducation">Education</a>
@@ -170,7 +180,7 @@
           <div class="eyebrow" data-i18n="heroEyebrow">IT systems student · Estonia</div>
           <h1 id="name">Mark<span>Grintšin.</span></h1>
           <p class="hero-title" data-i18n="heroTitle">Networks, automation and practical IT.</p>
-          <p class="hero-description" id="about" data-i18n="heroDescription">I study IT systems at Rakvere Ametikool and enjoy working with PCs, PowerShell and networks. I am looking for an Erasmus+ internship in Spain from 15 February to 9 May, where I can contribute and develop my programming skills.</p>
+          <p class="hero-description" data-i18n="heroDescription">I study IT systems at Rakvere Ametikool and enjoy working with PCs, PowerShell and networks. I am looking for an Erasmus+ internship in Spain from 15 February to 9 May, where I can contribute and develop my programming skills.</p>
           <div class="actions">
             <a class="button primary" href="assets/CV_Mark_Grintsin_EN.pdf" download>
               <span data-i18n="downloadCv">Download CV</span>
@@ -208,6 +218,24 @@
         <div><p class="strip-label" data-i18n="stripPlacementLabel">Placement goal</p><p class="strip-value" data-i18n="stripPlacement">Spain · 15 Feb – 9 May</p></div>
       </div>
     </div>
+    <section class="content-section container" id="about" aria-labelledby="about-title">
+      <div class="about-layout">
+        <div class="about-story">
+          <div class="eyebrow" data-i18n="aboutEyebrow">About me</div>
+          <h2 class="section-title" id="about-title" data-i18n="aboutTitle">From curiosity to practical skills.</h2>
+          <p data-i18n="aboutStory">I am Mark, an IT systems student at Rakvere Ametikool in Estonia. I like understanding how computers work and solving practical problems. My experience comes from school assignments and personal projects: assembling PCs, diagnosing a RAM fault and setting up a Minecraft server with a friend.</p>
+          <p data-i18n="aboutGoal">I want to grow in networking, IT support and programming. I already use PowerShell in school assignments and Cisco Packet Tracer in network labs. I have started learning Python, and I am developing my Linux and Bash skills with guidance.</p>
+          <p data-i18n="aboutPlacement">For my three-month Erasmus+ internship in Spain, I am looking for a team where I can help with practical IT tasks, learn from a supervisor and gradually take on more responsibility.</p>
+        </div>
+        <aside class="about-card" aria-labelledby="about-card-title">
+          <h3 id="about-card-title" data-i18n="aboutCardTitle">What I can bring to a team</h3>
+          <div class="about-point"><h4 data-i18n="aboutPracticalTitle">Practical starting point</h4><p data-i18n="aboutPractical">PC assembly and repair, remote server setup and PowerShell coursework.</p></div>
+          <div class="about-point"><h4 data-i18n="aboutLearningTitle">Clear learning goals</h4><p data-i18n="aboutLearning">Build stronger networking and support skills, then develop automation and programming through real tasks.</p></div>
+          <div class="about-point"><h4 data-i18n="aboutLanguagesTitle">Communication</h4><p data-i18n="aboutLanguages">I speak Estonian, Russian and English at a good level, based on my own assessment.</p></div>
+          <div class="about-point"><h4 data-i18n="aboutDatesTitle">Placement period</h4><p data-i18n="aboutDates">15 February – 9 May · Erasmus+ through my school.</p></div>
+        </aside>
+      </div>
+    </section>
     <section class="content-section container" id="projects" aria-labelledby="projects-title">
       <div class="section-heading">
         <div><div class="eyebrow" data-i18n="projectsEyebrow">Practical experience</div><h2 id="projects-title" data-i18n="projectsTitle">Selected projects.</h2></div>
@@ -348,6 +376,14 @@
   <script>
     const translations = {
       en: {
+        navAbout:'About me',aboutEyebrow:'About me',aboutTitle:'From curiosity to practical skills.',
+        aboutStory:'I am Mark, an IT systems student at Rakvere Ametikool in Estonia. I like understanding how computers work and solving practical problems. My experience comes from school assignments and personal projects: assembling PCs, diagnosing a RAM fault and setting up a Minecraft server with a friend.',
+        aboutGoal:'I want to grow in networking, IT support and programming. I already use PowerShell in school assignments and Cisco Packet Tracer in network labs. I have started learning Python, and I am developing my Linux and Bash skills with guidance.',
+        aboutPlacement:'For my three-month Erasmus+ internship in Spain, I am looking for a team where I can help with practical IT tasks, learn from a supervisor and gradually take on more responsibility.',
+        aboutCardTitle:'What I can bring to a team',aboutPracticalTitle:'Practical starting point',aboutPractical:'PC assembly and repair, remote server setup and PowerShell coursework.',
+        aboutLearningTitle:'Clear learning goals',aboutLearning:'Build stronger networking and support skills, then develop automation and programming through real tasks.',
+        aboutLanguagesTitle:'Communication',aboutLanguages:'I speak Estonian, Russian and English at a good level, based on my own assessment.',
+        aboutDatesTitle:'Placement period',aboutDates:'15 February – 9 May · Erasmus+ through my school.',
         skip:'Skip to content',navProjects:'Projects',navSkills:'Skills',navEducation:'Education',navContact:'Contact',
         heroEyebrow:'IT systems student · Estonia',heroTitle:'Networks, automation and practical IT.',
         heroDescription:'I study IT systems at Rakvere Ametikool and enjoy working with PCs, PowerShell and networks. I am looking for an Erasmus+ internship in Spain from 15 February to 9 May, where I can contribute and develop my programming skills.',
@@ -375,6 +411,14 @@
         pageTitle:'Mark Grintšin — IT Student Portfolio',panelAria:'Practical learning areas: PC hardware, PowerShell and networks',navAria:'Main navigation',languageAria:'Language',menuOpen:'Open menu',menuClose:'Close menu'
       },
       et: {
+        navAbout:'Minust',aboutEyebrow:'Minust',aboutTitle:'Huvi arvutite vastu, päris kogemus.',
+        aboutStory:'Olen Mark ja õpin Rakvere Ametikoolis IT-süsteeme. Mulle meeldib aru saada, kuidas arvutid töötavad, ning lahendada praktilisi probleeme. Olen kogemusi saanud kooliülesannetest ja isiklikest projektidest: arvutite kokkupanekust, RAM-i vea diagnoosimisest ning sõbraga Minecrafti serveri seadistamisest.',
+        aboutGoal:'Soovin areneda võrkude, IT-toe ja programmeerimise valdkonnas. Kasutan koolitöödes PowerShelli ning võrgulaborites Cisco Packet Tracerit. Olen alustanud Pythoni õppimist ning arendan Linuxi ja Bashi oskusi juhendamise toel.',
+        aboutPlacement:'Otsin kolmekuuliseks Erasmus+ praktikaks Hispaanias meeskonda, kus saan aidata praktiliste IT-ülesannetega, õppida juhendajalt ning võtta oskuste arenedes rohkem vastutust.',
+        aboutCardTitle:'Mida saan meeskonda tuua',aboutPracticalTitle:'Praktiline kogemus',aboutPractical:'Arvutite kokkupanek ja parandamine, serveri kaugseadistus ning PowerShelli koolitööd.',
+        aboutLearningTitle:'Selged õppimise eesmärgid',aboutLearning:'Arendada võrgu- ja kasutajatoe oskusi ning õppida päris ülesannete kaudu automatiseerimist ja programmeerimist.',
+        aboutLanguagesTitle:'Suhtlemine',aboutLanguages:'Räägin eesti, vene ja inglise keelt heal tasemel. Keeleoskus põhineb minu enda hinnangul.',
+        aboutDatesTitle:'Praktika aeg',aboutDates:'15. veebruar – 9. mai · Erasmus+ kooli kaudu.',
         skip:'Liigu sisu juurde',navProjects:'Projektid',navSkills:'Oskused',navEducation:'Haridus',navContact:'Kontakt',
         heroEyebrow:'IT-süsteemide õpilane · Eesti',heroTitle:'Võrgud, automatiseerimine ja praktiline IT.',
         heroDescription:'Õpin Rakvere Ametikoolis IT-süsteeme ning mulle meeldib töötada arvutite, PowerShelli ja võrkudega. Otsin Hispaanias ettevõtet Erasmus+ praktikaks 15. veebruarist 9. maini, et rakendada oma oskusi ja õppida juurde programmeerimist.',
