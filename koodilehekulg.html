@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -96,12 +96,9 @@
         </div>
     </div>
     <div id="footer-root"></div>
-    <script type="text/babel" src="utils/translations.js"></script>
-    <script type="text/babel" src="components/Header.js"></script>
     <script type="text/babel" src="components/Footer.js"></script>
-    <script>
-        ReactDOM.render(<Header />, document.getElementById('header-root'));
-        ReactDOM.render(<Footer />, document.getElementById('footer-root'));
+    <script type="text/babel">
+        ReactDOM.createRoot(document.getElementById('footer-root')).render(<Footer />);
     </script>
 </body>
 </html>

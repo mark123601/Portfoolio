@@ -1,39 +1,505 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Portfoolio - Loov Professionaal</title>
-    <meta name="description" content="Professionaalne portfoolio loominguliste tööde ja projektide esitlemiseks">
-    <meta name="keywords" content="portfoolio, loov, disain, projektid, töö">
-    
-    <meta property="og:title" content="Portfoolio - Loov Professionaal">
-    <meta property="og:description" content="Professionaalne portfoolio loominguliste tööde ja projektide esitlemiseks">
-    
-    <meta name="twitter:title" content="Portfoolio - Loov Professionaal">
-    <meta name="twitter:description" content="Professionaalne portfoolio loominguliste tööde ja projektide esitlemiseks">
-    
-    <meta name="google-site-verification" content="L7gjPSlhc4rs_Kj7KzRjx4UMJ1YwRpG8gIzLeZ7ydDU">
-
-    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
-    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
-        <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
-        <link href="dist/tailwind.css" rel="stylesheet">
-
-    <!-- Styles moved to dist/tailwind.css -->
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17352b">
+  <meta name="description" content="Mark Grintšin, IT systems student at Rakvere Ametikool. Practical projects in PC repair, PowerShell and server setup. Seeking a three-month Erasmus+ internship in Spain.">
+  <link rel="canonical" href="https://mark123601.github.io/Portfoolio/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mark Grintšin — IT Student Portfolio">
+  <meta property="og:description" content="IT systems student seeking a three-month Erasmus+ internship in Spain. Explore practical work in PC repair, PowerShell and server setup.">
+  <meta property="og:url" content="https://mark123601.github.io/Portfoolio/">
+  <meta name="google-site-verification" content="L7gjPSlhc4rs_Kj7KzRjx4UMJ1YwRpG8gIzLeZ7ydDU">
+  <title>Mark Grintšin — IT Student Portfolio</title>
+  <style>
+    :root{--ink:#17352b;--muted:#5d6962;--paper:#f6f5ef;--white:#fff;--line:#d8ded5;--accent:#d3f571;--forest:#17352b;--round:18px;--width:1180px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:94px}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+    button,a{-webkit-tap-highlight-color:transparent}
+    a{color:inherit}
+    button{font:inherit}
+    a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #5e890d;outline-offset:5px}
+    .container{max-width:var(--width);margin-inline:auto;padding-inline:32px}
+    .skip{position:fixed;top:-80px;left:20px;padding:12px 18px;background:var(--white);z-index:20}
+    .skip:focus{top:16px}
+    header{position:sticky;top:0;background:rgba(246,245,239,.97);z-index:10;border-bottom:1px solid var(--line)}
+    .header-inner{height:82px;display:flex;align-items:center;justify-content:space-between;gap:26px}
+    .brand{text-decoration:none;display:flex;align-items:center;gap:13px;font-size:13px;font-weight:700;letter-spacing:.01em;white-space:nowrap}
+    .monogram{display:grid;place-items:center;height:38px;width:38px;background:var(--forest);color:var(--accent);border-radius:50%;font-size:12px;letter-spacing:-.04em}
+    nav{display:flex;gap:27px;align-items:center}
+    nav a{text-decoration:none;font-size:13px;transition:color .15s}
+    nav a:hover{color:#55770d}
+    .header-controls{display:flex;align-items:center;gap:20px}
+    .languages{display:flex;gap:2px;padding:3px;background:#e5e8df;border-radius:8px}
+    .languages button{border:0;background:transparent;color:#526057;padding:6px 9px;border-radius:5px;font-size:11px;font-weight:700;cursor:pointer}
+    .languages button[aria-pressed="true"]{background:white;color:var(--forest);box-shadow:0 1px 3px #17352b12}
+    .menu-button{display:none;border:1px solid var(--line);background:transparent;width:38px;height:38px;border-radius:7px;cursor:pointer}
+    .menu-button svg{width:18px;vertical-align:middle}
+    .eyebrow{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.1em;font-weight:700;text-transform:uppercase}
+    .eyebrow:before{content:"";width:6px;height:6px;border-radius:50%;background:#6c8b4d;flex-shrink:0}
+    .hero{padding:70px 0 62px}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:60px}
+    h1{font-size:clamp(52px,6.7vw,86px);font-weight:600;line-height:1.01;letter-spacing:-.065em;margin:24px 0 24px}
+    h1 span{display:block}
+    .hero-title{font-size:25px;letter-spacing:-.035em;line-height:1.28;max-width:400px;margin:0 0 22px}
+    .hero-description{font-size:15px;line-height:1.8;color:var(--muted);max-width:480px;margin:0}
+    .actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:28px}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:14px;text-decoration:none;padding:14px 19px;border:1px solid var(--forest);border-radius:8px;font-size:12px;font-weight:700;min-height:46px;transition:background .15s,transform .15s}
+    .button:hover{transform:translateY(-2px)}
+    .button.primary{background:var(--forest);color:var(--white)}
+    .button.primary:hover{background:#28543f}
+    .button.secondary:hover{background:#e8eddf}
+    .button svg{height:15px;width:15px;flex-shrink:0}
+    .availability{margin-top:26px;display:flex;align-items:center;gap:9px;font-size:11px;color:var(--muted)}
+    .availability .dot{height:6px;width:6px;border-radius:50%;background:#668a39}
+    .practice-panel{position:relative;isolation:isolate;background:var(--forest);color:#f6f5ef;border-radius:var(--round);min-height:440px;padding:29px;overflow:hidden}
+    .practice-panel:before{content:"";position:absolute;inset:0;z-index:-1;background-image:radial-gradient(#91b08d36 .8px,transparent .8px);background-size:17px 17px}
+    .panel-label{display:flex;justify-content:space-between;font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:#b7c7b7}
+    .panel-label span:last-child{color:var(--accent)}
+    .learning-map{position:relative;height:284px;margin:17px 0 8px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;align-items:center;justify-items:center;gap:35px}
+    .learning-map:before{position:absolute;content:"";width:1px;height:134px;background:#6c8b72;left:50%;top:74px}
+    .learning-map:after{position:absolute;content:"";height:1px;width:55%;background:#6c8b72;left:22.5%;top:73px}
+    .node{position:relative;z-index:1;background:#25483a;border:1px solid #608269;border-radius:14px;padding:17px 12px;min-height:117px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;max-width:140px;width:100%;text-align:center}
+    .node svg{width:36px;height:36px;stroke:var(--accent);fill:none;stroke-width:1.5}
+    .node span{font-size:11px}
+    .node.network{grid-column:1 / 3;max-width:168px;background:var(--accent);border:0;color:var(--forest)}
+    .node.network svg{stroke:var(--forest)}
+    .panel-caption{font-size:20px;letter-spacing:-.02em;margin:0 0 7px}
+    .panel-subtitle{font-size:11px;color:#b7c7b7;margin:0;line-height:1.65}
+    .intro-strip{display:grid;grid-template-columns:1fr 1fr 1fr;padding-top:24px;padding-bottom:26px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .intro-strip>div{padding:0 28px;border-right:1px solid var(--line)}
+    .intro-strip>div:first-child{padding-left:0}
+    .intro-strip>div:last-child{padding-right:0;border:0}
+    .strip-label{font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin:0 0 8px}
+    .strip-value{font-size:15px;line-height:1.4;margin:0;font-weight:500}
+    section.content-section{padding:76px 0}
+    .section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:35px}
+    .section-heading h2,.section-title{font-size:36px;letter-spacing:-.045em;line-height:1.15;font-weight:500;margin:12px 0 0}
+    .section-heading>p{max-width:325px;margin:0;font-size:13px;line-height:1.7;color:var(--muted)}
+    .about-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:65px;align-items:start}
+    .about-story p{font-size:15px;line-height:1.85;color:var(--muted);max-width:570px;margin:22px 0 0}
+    .about-card{background:#eaf0e2;border:1px solid #d8e1d2;border-radius:var(--round);padding:28px}
+    .about-card h3{font-size:19px;letter-spacing:-.025em;font-weight:500;margin:0 0 20px}
+    .about-point{padding:17px 0;border-top:1px solid #d0dbc9}
+    .about-point:last-child{padding-bottom:0}
+    .about-point h4{font-size:12px;margin:0 0 7px}
+    .about-point p{font-size:12px;line-height:1.75;color:var(--muted);margin:0}
+    @media(max-width:790px){.about-layout{grid-template-columns:1fr;gap:26px}.about-story p{max-width:600px}.about-card{padding:24px}}
+    .project-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;align-items:start}
+    .project{background:var(--white);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+    .project-visual{height:168px;display:flex;justify-content:center;align-items:center;position:relative;overflow:hidden}
+    .project-visual.hardware{background:#e3e7df}
+    .project-visual.server{background:#e9ead7}
+    .project-visual.script{background:#e0e8e5}
+    .project-visual svg{width:138px;height:96px}
+    .visual-mark{position:absolute;top:17px;left:20px;font-size:10px;color:#647265;letter-spacing:.06em}
+    .project-body{padding:23px}
+    .project-category{font-size:9px;letter-spacing:.1em;font-weight:700;text-transform:uppercase;color:#68766a;margin:0 0 13px}
+    .project h3{font-size:20px;line-height:1.2;letter-spacing:-.025em;font-weight:500;margin:0 0 12px}
+    .project-description{font-size:12px;line-height:1.75;color:var(--muted);margin:0 0 21px;min-height:65px}
+    .tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+    .tag{font-size:9px;padding:5px 8px;background:#f1f4ed;border-radius:4px;color:#4c6351}
+    details{border-top:1px solid var(--line);padding-top:15px}
+    summary{cursor:pointer;font-size:11px;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";font-size:19px;line-height:1;font-weight:400}
+    details[open] summary:after{content:"−"}
+    .project-details{font-size:12px;line-height:1.75;color:var(--muted);padding-top:16px}
+    .project-details h4{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin:0 0 6px}
+    .project-details p{margin:0 0 13px}
+    .project-details p:last-child{margin-bottom:0}
+    .skills-section{background:#eaf0e2;border-top:1px solid #d8e1d2;border-bottom:1px solid #d8e1d2}
+    .skills-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:95px}
+    .skills-intro{font-size:14px;line-height:1.8;color:var(--muted);max-width:290px;margin:20px 0 0}
+    .skills-list{padding-top:0}
+    .skill-row{display:grid;grid-template-columns:160px 1fr;gap:20px;padding:19px 0;border-bottom:1px solid #d0dbc9}
+    .skill-row:first-child{padding-top:0}
+    .skill-row:last-child{border:0;padding-bottom:0}
+    .skill-name{font-size:14px;font-weight:600;margin:0}
+    .skill-description{font-size:12px;line-height:1.75;color:var(--muted);margin:0}
+    .education-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:95px}
+    .education-item{padding:24px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:15px}
+    .education-item:first-child{padding-top:0}
+    .education-item:last-child{border:0}
+    .education-item h3{font-size:18px;letter-spacing:-.015em;font-weight:500;margin:0 0 7px}
+    .education-item p{font-size:12px;color:var(--muted);line-height:1.6;margin:0}
+    .education-item time{font-size:11px;white-space:nowrap;padding-top:4px;color:var(--muted)}
+    .language-block{margin-top:28px;font-size:12px;line-height:1.7;color:var(--muted)}
+    .language-block strong{display:block;color:var(--ink);font-size:12px;margin-bottom:6px}
+    .contact-section{padding:66px 0;background:var(--forest);color:var(--paper)}
+    .contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+    .contact-section .eyebrow{color:#bdceb7}
+    .contact-section .eyebrow:before{background:var(--accent)}
+    .contact-section h2{font-size:40px;line-height:1.1;letter-spacing:-.04em;font-weight:500;margin:18px 0}
+    .contact-section p{color:#bdceb7;font-size:13px;line-height:1.8;max-width:365px;margin:0}
+    .contact-links{display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+    .email-link{text-underline-offset:6px;font-size:clamp(18px,2.4vw,25px);font-weight:400;letter-spacing:-.02em;overflow-wrap:anywhere}
+    .phone-link{font-size:14px;color:#c9d7c5;text-decoration:none}
+    .contact-section .button{background:var(--accent);color:var(--forest);border-color:var(--accent);margin-top:8px}
+    footer{background:var(--forest);color:#aabda8;border-top:1px solid #3b5543;padding:24px 0}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:25px;font-size:10px}
+    .footer-links{display:flex;gap:22px;flex-wrap:wrap}
+    .footer-links a{text-decoration:none}
+    .footer-links a:hover{text-decoration:underline}
+    @media(min-width:1350px){.hero{padding:80px 0 72px}}
+    @media(max-width:1050px){.hero-grid{gap:35px}.container{padding-inline:27px}nav{gap:17px}.skills-layout,.education-layout{gap:50px}.contact-layout{gap:50px}.skill-row{grid-template-columns:140px 1fr}}
+    @media(max-width:790px){.header-inner{height:72px}.menu-button{display:block}.header-controls{gap:12px}nav{display:none;position:absolute;left:0;right:0;top:72px;background:var(--paper);padding:22px 27px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line);gap:22px}nav.open{display:flex}nav a{font-size:15px}.hero{padding:48px 0}.hero-grid{grid-template-columns:1fr;gap:34px}h1{font-size:clamp(56px,11vw,78px);margin:23px 0}.hero-description{max-width:600px}.practice-panel{min-height:390px;max-width:600px;width:100%}.learning-map{height:252px;gap:24px;max-width:420px;margin-inline:auto}.learning-map:before{top:62px;height:128px}.learning-map:after{top:62px}.node{min-height:105px}.project-grid{grid-template-columns:1fr;gap:20px}.project{display:grid;grid-template-columns:180px 1fr}.project-visual{height:100%;min-height:220px}.project-description{min-height:0}.section-heading{align-items:flex-start;flex-direction:column;gap:16px}.section-heading>p{max-width:500px}.skills-layout,.education-layout{grid-template-columns:1fr;gap:32px}.skills-intro{max-width:500px}.contact-layout{grid-template-columns:1fr;gap:28px}section.content-section{padding:54px 0}.contact-section{padding:52px 0}.section-title,.section-heading h2{font-size:32px}.contact-section h2{font-size:34px}.intro-strip>div{padding-inline:17px}.strip-value{font-size:13px}.strip-label{font-size:9px}.skill-row{grid-template-columns:150px 1fr}}
+    @media(max-width:480px){.container{padding-inline:22px}.brand{gap:9px;font-size:12px}.header-controls{gap:8px}.languages button{padding:6px 8px}.hero-title{font-size:23px}.hero-description{font-size:14px}.practice-panel{padding:24px;min-height:378px}.intro-strip{grid-template-columns:1fr;gap:18px;padding-block:23px}.intro-strip>div{padding:0;border:0}.strip-label{margin-bottom:5px}.strip-value{font-size:14px}.project{display:block}.project-visual{height:150px;min-height:0}.project-visual svg{height:90px}.project-body{padding:22px}.skill-row{grid-template-columns:1fr;gap:7px}.education-item{grid-template-columns:1fr;gap:8px}.education-item time{grid-row:1;font-size:10px;padding:0}.footer-inner{align-items:flex-start;flex-direction:column;gap:17px}.footer-links{gap:19px}.button{padding:13px 15px;font-size:11px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}.button:hover{transform:none}}
+  </style>
 </head>
 <body>
-    <div id="root"></div>
-    <script type="text/babel" src="utils/translations.js"></script>
-    <script type="text/babel" src="components/Header.js"></script>
-    <script type="text/babel" src="components/Hero.js"></script>
-    <script type="text/babel" src="components/About.js"></script>
-    <script type="text/babel" src="components/Skills.js"></script>
-    <script type="text/babel" src="components/Contact.js"></script>
-    <script type="text/babel" src="components/Footer.js"></script>
-    <script type="text/babel" src="app.js"></script>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="#main" aria-label="Mark Grintšin home"><span class="monogram">MG</span><span>Mark Grintšin</span></a>
+      <div class="header-controls">
+        <nav id="navigation" aria-label="Main navigation">
+          <a href="#about" data-i18n="navAbout">About me</a>
+          <a href="#projects" data-i18n="navProjects">Projects</a>
+          <a href="#skills" data-i18n="navSkills">Skills</a>
+          <a href="#education" data-i18n="navEducation">Education</a>
+          <a href="#contact" data-i18n="navContact">Contact</a>
+        </nav>
+        <div class="languages" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true" aria-label="English">EN</button>
+          <button type="button" data-lang="et" aria-pressed="false" aria-label="Eesti">ET</button>
+        </div>
+        <button class="menu-button" type="button" aria-controls="navigation" aria-expanded="false" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero container" id="home" aria-labelledby="name">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow" data-i18n="heroEyebrow">IT systems student · Estonia</div>
+          <h1 id="name">Mark<span>Grintšin.</span></h1>
+          <p class="hero-title" data-i18n="heroTitle">Networks, automation and practical IT.</p>
+          <p class="hero-description" data-i18n="heroDescription">I study IT systems at Rakvere Ametikool and enjoy working with PCs, PowerShell and networks. I am looking for an Erasmus+ internship in Spain from 15 February to 9 May, where I can contribute and develop my programming skills.</p>
+          <div class="actions">
+            <a class="button primary" href="assets/CV_Mark_Grintsin_EN.pdf" download>
+              <span data-i18n="downloadCv">Download CV</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg>
+            </a>
+            <a class="button secondary" href="#projects"><span data-i18n="exploreProjects">Explore my projects</span><span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="availability"><span class="dot" aria-hidden="true"></span><span data-i18n="availability">Seeking an Erasmus+ host company in Spain</span></div>
+        </div>
+        <div class="practice-panel" role="img" aria-label="Practical learning areas: PC hardware, PowerShell and networks" id="practice-panel">
+          <div class="panel-label"><span data-i18n="panelLabel">Areas of practice</span><span>MG / IT25</span></div>
+          <div class="learning-map" aria-hidden="true">
+            <div class="node">
+              <svg viewBox="0 0 48 48"><rect x="7" y="9" width="34" height="23" rx="3"/><path d="M24 32v7m-9 0h18M11 27h26"/></svg>
+              <span data-i18n="nodeHardware">PC hardware</span>
+            </div>
+            <div class="node">
+              <svg viewBox="0 0 48 48"><rect x="5" y="9" width="38" height="30" rx="4"/><path d="m13 18 7 6-7 6m11 0h10"/></svg>
+              <span>PowerShell</span>
+            </div>
+            <div class="node network">
+              <svg viewBox="0 0 48 48"><rect x="18" y="4" width="12" height="10" rx="2"/><rect x="3" y="32" width="12" height="10" rx="2"/><rect x="33" y="32" width="12" height="10" rx="2"/><path d="M24 14v10H9v8m15-8h15v8"/></svg>
+              <span data-i18n="nodeNetworks">Networks</span>
+            </div>
+          </div>
+          <p class="panel-caption" data-i18n="panelCaption">Hands-on learning.</p>
+          <p class="panel-subtitle" data-i18n="panelSubtitle">School labs, personal projects and practical problem-solving.</p>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div class="intro-strip">
+        <div><p class="strip-label" data-i18n="stripEducationLabel">Education</p><p class="strip-value">Rakvere Ametikool</p></div>
+        <div><p class="strip-label" data-i18n="stripFocusLabel">Practice interests</p><p class="strip-value" data-i18n="stripFocus">Networks and automation</p></div>
+        <div><p class="strip-label" data-i18n="stripPlacementLabel">Placement goal</p><p class="strip-value" data-i18n="stripPlacement">Spain · 15 Feb – 9 May</p></div>
+      </div>
+    </div>
+    <section class="content-section container" id="about" aria-labelledby="about-title">
+      <div class="about-layout">
+        <div class="about-story">
+          <div class="eyebrow" data-i18n="aboutEyebrow">About me</div>
+          <h2 class="section-title" id="about-title" data-i18n="aboutTitle">From curiosity to practical skills.</h2>
+          <p data-i18n="aboutStory">I am Mark, an IT systems student at Rakvere Ametikool in Estonia. I like understanding how computers work and solving practical problems. My experience comes from school assignments and personal projects: assembling PCs, diagnosing a RAM fault and setting up a Minecraft server with a friend.</p>
+          <p data-i18n="aboutGoal">I want to grow in networking, IT support and programming. I already use PowerShell in school assignments and Cisco Packet Tracer in network labs. I have started learning Python, and I am developing my Linux and Bash skills with guidance.</p>
+          <p data-i18n="aboutPlacement">For my three-month Erasmus+ internship in Spain, I am looking for a team where I can help with practical IT tasks, learn from a supervisor and gradually take on more responsibility.</p>
+        </div>
+        <aside class="about-card" aria-labelledby="about-card-title">
+          <h3 id="about-card-title" data-i18n="aboutCardTitle">What I can bring to a team</h3>
+          <div class="about-point"><h4 data-i18n="aboutPracticalTitle">Practical starting point</h4><p data-i18n="aboutPractical">PC assembly and repair, remote server setup and PowerShell coursework.</p></div>
+          <div class="about-point"><h4 data-i18n="aboutLearningTitle">Clear learning goals</h4><p data-i18n="aboutLearning">Build stronger networking and support skills, then develop automation and programming through real tasks.</p></div>
+          <div class="about-point"><h4 data-i18n="aboutLanguagesTitle">Communication</h4><p data-i18n="aboutLanguages">I speak Estonian, Russian and English at a good level, based on my own assessment.</p></div>
+          <div class="about-point"><h4 data-i18n="aboutDatesTitle">Placement period</h4><p data-i18n="aboutDates">15 February – 9 May · Erasmus+ through my school.</p></div>
+        </aside>
+      </div>
+    </section>
+    <section class="content-section container" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <div><div class="eyebrow" data-i18n="projectsEyebrow">Practical experience</div><h2 id="projects-title" data-i18n="projectsTitle">Selected projects.</h2></div>
+        <p data-i18n="projectsIntro">A closer look at what I have done, my contribution and the result.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project">
+          <div class="project-visual hardware" aria-hidden="true">
+            <span class="visual-mark" data-i18n="visualHardware">01 / HARDWARE</span>
+            <svg viewBox="0 0 160 112" fill="none" stroke="#45624d" stroke-width="2">
+              <rect x="16" y="15" width="60" height="84" rx="7" fill="#f5f7f0"/><rect x="25" y="26" width="42" height="9" rx="2"/><circle cx="46" cy="88" r="3"/><path d="M26 48h13m-13 7h24m-24 7h24"/>
+              <rect x="95" y="28" width="41" height="58" rx="3" fill="#c7d8af"/><rect x="103" y="38" width="25" height="11" rx="1"/><rect x="103" y="56" width="25" height="11" rx="1"/><path d="M102 78v7m7-7v7m7-7v7m7-7v7m7-7v7"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <p class="project-category" data-i18n="personalExperience">Personal experience</p>
+            <h3 data-i18n="repairTitle">Finding a RAM fault.</h3>
+            <p class="project-description" data-i18n="repairDescription">Diagnosed faulty memory in a desktop PC and repaired the computer.</p>
+            <div class="tags"><span class="tag" data-i18n="nodeHardware">PC hardware</span><span class="tag" data-i18n="tagDiagnostics">Diagnostics</span><span class="tag">RAM</span></div>
+            <details>
+              <summary data-i18n="readProject">Read project details</summary>
+              <div class="project-details">
+                <h4 data-i18n="myContribution">My contribution</h4>
+                <p data-i18n="repairContribution">I carried out diagnostics, identified the faulty RAM and repaired the desktop computer. I also have experience assembling and disassembling PCs.</p>
+                <h4 data-i18n="result">Result</h4><p data-i18n="repairResult">The PC was restored to working condition.</p>
+              </div>
+            </details>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-visual server" aria-hidden="true">
+            <span class="visual-mark" data-i18n="visualServer">02 / SERVER</span>
+            <svg viewBox="0 0 160 112" fill="none" stroke="#5a6741" stroke-width="2">
+              <rect x="18" y="20" width="71" height="21" rx="4" fill="#fafbf2"/><rect x="18" y="47" width="71" height="21" rx="4" fill="#fafbf2"/><rect x="18" y="74" width="71" height="21" rx="4" fill="#fafbf2"/><path d="M29 30h25m-25 27h25m-25 28h25"/><circle cx="77" cy="30" r="2" fill="#93b957"/><circle cx="77" cy="57" r="2" fill="#93b957"/><circle cx="77" cy="85" r="2" fill="#93b957"/><path d="M89 57h21V33h28m-28 24v27h28"/><circle cx="138" cy="33" r="9" fill="#d4deaf"/><circle cx="138" cy="84" r="9" fill="#d4deaf"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <p class="project-category" data-i18n="withFriend">Project with a friend</p>
+            <h3 data-i18n="serverTitle">A modded Minecraft server.</h3>
+            <p class="project-description" data-i18n="serverDescription">Helped set up a server remotely, added mods and made it playable with others.</p>
+            <div class="tags"><span class="tag">Minecraft</span><span class="tag" data-i18n="tagRemote">Remote access</span><span class="tag" data-i18n="tagMods">Mods</span></div>
+            <details>
+              <summary data-i18n="readProject">Read project details</summary>
+              <div class="project-details">
+                <h4 data-i18n="myContribution">My contribution</h4>
+                <p data-i18n="serverContribution">I connected to my friend's computer using a remote access tool, downloaded the server software and added mods. We set up the Minecraft server together.</p>
+                <h4 data-i18n="result">Result</h4><p data-i18n="serverResult">Other players successfully joined the server.</p>
+              </div>
+            </details>
+          </div>
+        </article>
+        <article class="project">
+          <div class="project-visual script" aria-hidden="true">
+            <span class="visual-mark">03 / POWERSHELL</span>
+            <svg viewBox="0 0 160 112" fill="none" stroke="#456459" stroke-width="2">
+              <rect x="14" y="17" width="132" height="80" rx="7" fill="#f2f8f4"/><path d="M14 35h132"/><circle cx="25" cy="26" r="2" fill="#92ac8b"/><circle cx="34" cy="26" r="2" fill="#92ac8b"/><circle cx="43" cy="26" r="2" fill="#92ac8b"/><path d="m29 48 10 8-10 8m19 0h23M29 78h42m7 0h15"/><path d="m106 56 6 6 13-14" stroke="#699233" stroke-width="3"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <p class="project-category" data-i18n="schoolCoursework">School coursework</p>
+            <h3 data-i18n="scriptTitle">PowerShell in practice.</h3>
+            <p class="project-description" data-i18n="scriptDescription">Scripting fundamentals and Windows administration tasks completed at school.</p>
+            <div class="tags"><span class="tag">PowerShell</span><span class="tag">Windows</span><span class="tag" data-i18n="tagScripting">Scripting</span></div>
+            <details>
+              <summary data-i18n="readProject">Read project details</summary>
+              <div class="project-details">
+                <h4 data-i18n="coveredTopics">Topics covered</h4>
+                <p data-i18n="scriptContribution">Variables, arrays, conditional statements and loops. Administration assignments cover file systems, permissions, processes, backups, app installation, services and log analysis.</p>
+                <h4 data-i18n="context">Context</h4><p data-i18n="scriptResult">Practical assignments in my IT systems studies at Rakvere Ametikool.</p>
+              </div>
+            </details>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="content-section skills-section" id="skills" aria-labelledby="skills-title">
+      <div class="container skills-layout">
+        <div>
+          <div class="eyebrow" data-i18n="skillsEyebrow">What I bring</div>
+          <h2 class="section-title" id="skills-title" data-i18n="skillsTitle">Skills in context.</h2>
+          <p class="skills-intro" data-i18n="skillsIntro">I describe my skills through practical experience. Programming is an area I want to develop further during my internship.</p>
+        </div>
+        <div class="skills-list">
+          <div class="skill-row"><p class="skill-name">PowerShell</p><p class="skill-description" data-i18n="skillPowerShell">School scripting and Windows administration assignments, including variables, arrays, conditions and loops.</p></div>
+          <div class="skill-row"><p class="skill-name" data-i18n="skillNetworksTitle">Networking</p><p class="skill-description" data-i18n="skillNetworks">Practical use of Cisco Packet Tracer for network configuration exercises at school.</p></div>
+          <div class="skill-row"><p class="skill-name" data-i18n="skillHardwareTitle">PC hardware</p><p class="skill-description" data-i18n="skillHardware">PC assembly, disassembly and troubleshooting, including diagnosing a faulty RAM module.</p></div>
+          <div class="skill-row"><p class="skill-name">Linux / Bash</p><p class="skill-description" data-i18n="skillLinux">Beginner level. I currently work with guidance while developing my scripting skills.</p></div>
+          <div class="skill-row"><p class="skill-name">Python</p><p class="skill-description" data-i18n="skillPython">Introductory knowledge and an interest in learning more through practical programming tasks.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="content-section container" id="education" aria-labelledby="education-title">
+      <div class="education-layout">
+        <div>
+          <div class="eyebrow" data-i18n="educationEyebrow">My background</div>
+          <h2 class="section-title" id="education-title" data-i18n="educationTitle">Learning IT systems.</h2>
+          <div class="language-block"><strong data-i18n="languagesTitle">Languages</strong><span data-i18n="languagesDescription">Estonian, Russian and English: good proficiency, self-assessed.</span></div>
+        </div>
+        <div>
+          <div class="education-item">
+            <div><h3>Rakvere Ametikool</h3><p data-i18n="educationProgramme">IT Systems Junior Specialist programme</p><p data-i18n="educationLocation">Rakvere, Estonia · Group IT25</p></div>
+            <time data-i18n="educationPeriod">2025 — present</time>
+          </div>
+          <div class="education-item">
+            <div><h3>Rakvere Reaalkool</h3><p data-i18n="basicEducation">Basic education completed</p><p data-i18n="basicLocation">Rakvere, Estonia</p></div>
+            <time>2016 — 2025</time>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-layout">
+        <div>
+          <div class="eyebrow" data-i18n="contactEyebrow">Internship opportunities</div>
+          <h2 id="contact-title" data-i18n="contactTitle">Let’s talk about a placement.</h2>
+          <p data-i18n="contactDescription">I am seeking a host company for an Erasmus+ internship in Spain from 15 February to 9 May. My interests are networks, practical IT and programming.</p>
+        </div>
+        <div class="contact-links">
+          <a class="email-link" href="mailto:Mark.grintsin@rak.ee">Mark.grintsin@rak.ee</a>
+          <a class="phone-link" href="tel:+37258953512">+372 5895 3512</a>
+          <a class="button" href="assets/CV_Mark_Grintsin_EN.pdf" download><span data-i18n="downloadCv">Download CV</span><span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 Mark Grintšin</span>
+      <div class="footer-links">
+        <a href="documents.html" data-i18n="schoolDocuments">School documents</a>
+        <a href="koodilehekulg.html" data-i18n="itResources">IT resources</a>
+        <a href="https://github.com/mark123601" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="assets/CV_Mark_Grintsin_EN.docx" download data-i18n="wordCv">CV in Word</a>
+        <a href="#main" data-i18n="backTop">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const translations = {
+      en: {
+        navAbout:'About me',aboutEyebrow:'About me',aboutTitle:'From curiosity to practical skills.',
+        aboutStory:'I am Mark, an IT systems student at Rakvere Ametikool in Estonia. I like understanding how computers work and solving practical problems. My experience comes from school assignments and personal projects: assembling PCs, diagnosing a RAM fault and setting up a Minecraft server with a friend.',
+        aboutGoal:'I want to grow in networking, IT support and programming. I already use PowerShell in school assignments and Cisco Packet Tracer in network labs. I have started learning Python, and I am developing my Linux and Bash skills with guidance.',
+        aboutPlacement:'For my three-month Erasmus+ internship in Spain, I am looking for a team where I can help with practical IT tasks, learn from a supervisor and gradually take on more responsibility.',
+        aboutCardTitle:'What I can bring to a team',aboutPracticalTitle:'Practical starting point',aboutPractical:'PC assembly and repair, remote server setup and PowerShell coursework.',
+        aboutLearningTitle:'Clear learning goals',aboutLearning:'Build stronger networking and support skills, then develop automation and programming through real tasks.',
+        aboutLanguagesTitle:'Communication',aboutLanguages:'I speak Estonian, Russian and English at a good level, based on my own assessment.',
+        aboutDatesTitle:'Placement period',aboutDates:'15 February – 9 May · Erasmus+ through my school.',
+        skip:'Skip to content',navProjects:'Projects',navSkills:'Skills',navEducation:'Education',navContact:'Contact',
+        heroEyebrow:'IT systems student · Estonia',heroTitle:'Networks, automation and practical IT.',
+        heroDescription:'I study IT systems at Rakvere Ametikool and enjoy working with PCs, PowerShell and networks. I am looking for an Erasmus+ internship in Spain from 15 February to 9 May, where I can contribute and develop my programming skills.',
+        downloadCv:'Download CV',exploreProjects:'Explore my projects',availability:'Seeking an Erasmus+ host company in Spain',
+        panelLabel:'Areas of practice',nodeHardware:'PC hardware',nodeNetworks:'Networks',panelCaption:'Hands-on learning.',panelSubtitle:'School labs, personal projects and practical problem-solving.',
+        stripEducationLabel:'Education',stripFocusLabel:'Practice interests',stripFocus:'Networks and automation',stripPlacementLabel:'Placement goal',stripPlacement:'Spain · 15 Feb – 9 May',
+        projectsEyebrow:'Practical experience',projectsTitle:'Selected projects.',projectsIntro:'A closer look at what I have done, my contribution and the result.',
+        personalExperience:'Personal experience',repairTitle:'Finding a RAM fault.',repairDescription:'Diagnosed faulty memory in a desktop PC and repaired the computer.',
+        tagDiagnostics:'Diagnostics',readProject:'Read project details',myContribution:'My contribution',result:'Result',
+        repairContribution:'I carried out diagnostics, identified the faulty RAM and repaired the desktop computer. I also have experience assembling and disassembling PCs.',repairResult:'The PC was restored to working condition.',
+        withFriend:'Project with a friend',serverTitle:'A modded Minecraft server.',serverDescription:'Helped set up a server remotely, added mods and made it playable with others.',tagRemote:'Remote access',tagMods:'Mods',
+        serverContribution:'I connected to my friend’s computer using a remote access tool, downloaded the server software and added mods. We set up the Minecraft server together.',serverResult:'Other players successfully joined the server.',
+        schoolCoursework:'School coursework',scriptTitle:'PowerShell in practice.',scriptDescription:'Scripting fundamentals and Windows administration tasks completed at school.',tagScripting:'Scripting',
+        coveredTopics:'Topics covered',scriptContribution:'Variables, arrays, conditional statements and loops. Administration assignments cover file systems, permissions, processes, backups, app installation, services and log analysis.',context:'Context',scriptResult:'Practical assignments in my IT systems studies at Rakvere Ametikool.',
+        skillsEyebrow:'What I bring',skillsTitle:'Skills in context.',skillsIntro:'I describe my skills through practical experience. Programming is an area I want to develop further during my internship.',
+        skillPowerShell:'School scripting and Windows administration assignments, including variables, arrays, conditions and loops.',
+        skillNetworksTitle:'Networking',skillNetworks:'Practical use of Cisco Packet Tracer for network configuration exercises at school.',
+        skillHardwareTitle:'PC hardware',skillHardware:'PC assembly, disassembly and troubleshooting, including diagnosing a faulty RAM module.',
+        skillLinux:'Beginner level. I currently work with guidance while developing my scripting skills.',skillPython:'Introductory knowledge and an interest in learning more through practical programming tasks.',
+        educationEyebrow:'My background',educationTitle:'Learning IT systems.',languagesTitle:'Languages',languagesDescription:'Estonian, Russian and English: good proficiency, self-assessed.',
+        educationProgramme:'IT Systems Junior Specialist programme',educationLocation:'Rakvere, Estonia · Group IT25',educationPeriod:'2025 — present',basicEducation:'Basic education completed',basicLocation:'Rakvere, Estonia',
+        contactEyebrow:'Internship opportunities',contactTitle:'Let’s talk about a placement.',contactDescription:'I am seeking a host company for an Erasmus+ internship in Spain from 15 February to 9 May. My interests are networks, practical IT and programming.',
+        wordCv:'CV in Word',backTop:'Back to top ↑',schoolDocuments:'School documents',itResources:'IT resources',
+        visualHardware:'01 / HARDWARE',visualServer:'02 / SERVER',homeAria:'Mark Grintšin home',
+        pageTitle:'Mark Grintšin — IT Student Portfolio',panelAria:'Practical learning areas: PC hardware, PowerShell and networks',navAria:'Main navigation',languageAria:'Language',menuOpen:'Open menu',menuClose:'Close menu'
+      },
+      et: {
+        navAbout:'Minust',aboutEyebrow:'Minust',aboutTitle:'Huvi arvutite vastu, päris kogemus.',
+        aboutStory:'Olen Mark ja õpin Rakvere Ametikoolis IT-süsteeme. Mulle meeldib aru saada, kuidas arvutid töötavad, ning lahendada praktilisi probleeme. Olen kogemusi saanud kooliülesannetest ja isiklikest projektidest: arvutite kokkupanekust, RAM-i vea diagnoosimisest ning sõbraga Minecrafti serveri seadistamisest.',
+        aboutGoal:'Soovin areneda võrkude, IT-toe ja programmeerimise valdkonnas. Kasutan koolitöödes PowerShelli ning võrgulaborites Cisco Packet Tracerit. Olen alustanud Pythoni õppimist ning arendan Linuxi ja Bashi oskusi juhendamise toel.',
+        aboutPlacement:'Otsin kolmekuuliseks Erasmus+ praktikaks Hispaanias meeskonda, kus saan aidata praktiliste IT-ülesannetega, õppida juhendajalt ning võtta oskuste arenedes rohkem vastutust.',
+        aboutCardTitle:'Mida saan meeskonda tuua',aboutPracticalTitle:'Praktiline kogemus',aboutPractical:'Arvutite kokkupanek ja parandamine, serveri kaugseadistus ning PowerShelli koolitööd.',
+        aboutLearningTitle:'Selged õppimise eesmärgid',aboutLearning:'Arendada võrgu- ja kasutajatoe oskusi ning õppida päris ülesannete kaudu automatiseerimist ja programmeerimist.',
+        aboutLanguagesTitle:'Suhtlemine',aboutLanguages:'Räägin eesti, vene ja inglise keelt heal tasemel. Keeleoskus põhineb minu enda hinnangul.',
+        aboutDatesTitle:'Praktika aeg',aboutDates:'15. veebruar – 9. mai · Erasmus+ kooli kaudu.',
+        skip:'Liigu sisu juurde',navProjects:'Projektid',navSkills:'Oskused',navEducation:'Haridus',navContact:'Kontakt',
+        heroEyebrow:'IT-süsteemide õpilane · Eesti',heroTitle:'Võrgud, automatiseerimine ja praktiline IT.',
+        heroDescription:'Õpin Rakvere Ametikoolis IT-süsteeme ning mulle meeldib töötada arvutite, PowerShelli ja võrkudega. Otsin Hispaanias ettevõtet Erasmus+ praktikaks 15. veebruarist 9. maini, et rakendada oma oskusi ja õppida juurde programmeerimist.',
+        downloadCv:'Laadi CV alla',exploreProjects:'Vaata minu projekte',availability:'Otsin Hispaanias Erasmus+ praktikaettevõtet',
+        panelLabel:'Praktilise kogemuse valdkonnad',nodeHardware:'Arvuti riistvara',nodeNetworks:'Võrgud',panelCaption:'Õpin praktiliste tööde kaudu.',panelSubtitle:'Koolilaborid, isiklikud projektid ja probleemide lahendamine.',
+        stripEducationLabel:'Haridus',stripFocusLabel:'Praktikahuvid',stripFocus:'Võrgud ja automatiseerimine',stripPlacementLabel:'Praktika eesmärk',stripPlacement:'Hispaania · 15. veebruar – 9. mai',
+        projectsEyebrow:'Praktiline kogemus',projectsTitle:'Valitud projektid.',projectsIntro:'Mida olen teinud, milline oli minu panus ja mis oli tulemus.',
+        personalExperience:'Isiklik kogemus',repairTitle:'RAM-i vea leidmine.',repairDescription:'Diagnoosisin lauaarvuti vigase mälu ja parandasin arvuti.',
+        tagDiagnostics:'Diagnostika',readProject:'Loe projekti kohta',myContribution:'Minu panus',result:'Tulemus',
+        repairContribution:'Tegin diagnostikat, leidsin vigase RAM-i ja parandasin lauaarvuti. Mul on ka arvutite kokkupanemise ja lahtivõtmise kogemus.',repairResult:'Arvuti sai töökorda.',
+        withFriend:'Projekt koos sõbraga',serverTitle:'Modifikatsioonidega Minecrafti server.',serverDescription:'Aitasin kaugühendusega serveri seadistada, lisasin modifikatsioonid ja teised said mängima tulla.',tagRemote:'Kaugühendus',tagMods:'Modifikatsioonid',
+        serverContribution:'Ühendasin kaugjuhtimise tööriistaga sõbra arvutisse, laadisin serveritarkvara ja lisasin modifikatsioonid. Seadistasime Minecrafti serveri koos.',serverResult:'Teised mängijad said serveriga edukalt ühenduda.',
+        schoolCoursework:'Koolitöö',scriptTitle:'PowerShell praktikas.',scriptDescription:'Koolis tehtud skriptimise aluste ja Windowsi halduse ülesanded.',tagScripting:'Skriptimine',
+        coveredTopics:'Käsitletud teemad',scriptContribution:'Muutujad, massiivid, tingimuslaused ja tsüklid. Haldusülesannetes käsitletakse failisüsteeme, õigusi, protsesse, varundamist, rakenduste paigaldamist, teenuseid ja logide analüüsi.',context:'Kontekst',scriptResult:'Praktilised ülesanded Rakvere Ametikooli IT-süsteemide õpingutes.',
+        skillsEyebrow:'Minu oskused',skillsTitle:'Oskused ja kogemus.',skillsIntro:'Kirjeldan oma oskusi praktiliste kogemuste kaudu. Programmeerimine on valdkond, mida soovin praktikal edasi õppida.',
+        skillPowerShell:'Kooli skriptimise ja Windowsi halduse ülesanded, sealhulgas muutujad, massiivid, tingimuslaused ja tsüklid.',
+        skillNetworksTitle:'Võrgud',skillNetworks:'Cisco Packet Traceri praktiline kasutamine kooli võrguseadistuse ülesannetes.',
+        skillHardwareTitle:'Arvuti riistvara',skillHardware:'Arvutite kokkupanek, lahtivõtmine ja tõrkeotsing, sealhulgas vigase RAM-i diagnoosimine.',
+        skillLinux:'Algaja tase. Arendan skriptimisoskust ning töötan praegu juhendamisega.',skillPython:'Esialgsed teadmised ja huvi õppida juurde praktiliste programmeerimisülesannete kaudu.',
+        educationEyebrow:'Minu taust',educationTitle:'Õpin IT-süsteeme.',languagesTitle:'Keeled',languagesDescription:'Eesti, vene ja inglise keel: hea tase enda hinnangul.',
+        educationProgramme:'IT-süsteemide nooremspetsialisti eriala',educationLocation:'Rakvere, Eesti · Õpperühm IT25',educationPeriod:'2025 — praegu',basicEducation:'Põhiharidus omandatud',basicLocation:'Rakvere, Eesti',
+        contactEyebrow:'Praktikavõimalused',contactTitle:'Räägime praktikavõimalusest.',contactDescription:'Otsin Hispaanias ettevõtet Erasmus+ praktikaks 15. veebruarist 9. maini. Mind huvitavad võrgud, praktiline IT ja programmeerimine.',
+        wordCv:'CV Wordi failina',backTop:'Tagasi üles ↑',schoolDocuments:'Kooli dokumendid',itResources:'IT-ressursid',
+        visualHardware:'01 / RIISTVARA',visualServer:'02 / SERVER',homeAria:'Mark Grintšin avaleht',
+        pageTitle:'Mark Grintšin — IT-portfoolio',panelAria:'Praktilise õppimise valdkonnad: arvuti riistvara, PowerShell ja võrgud',navAria:'Peamenüü',languageAria:'Keel',menuOpen:'Ava menüü',menuClose:'Sulge menüü'
+      }
+    };
+    const navigation = document.getElementById('navigation');
+    const menuButton = document.querySelector('.menu-button');
+    let currentLanguage = 'en';
+    function updateMenuLabel() {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-label', translations[currentLanguage][isOpen ? 'menuClose' : 'menuOpen']);
+    }
+    function closeMenu() {
+      navigation.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      updateMenuLabel();
+    }
+    function setLanguage(language) {
+      if (!translations[language]) return;
+      currentLanguage = language;
+      const strings = translations[language];
+      document.documentElement.lang = language;
+      document.title = strings.pageTitle;
+      document.querySelectorAll('[data-i18n]').forEach(function(el) {
+        const text = strings[el.dataset.i18n];
+        if (text !== undefined) el.textContent = text;
+      });
+      document.querySelectorAll('[data-lang]').forEach(function(button) {
+        button.setAttribute('aria-pressed', String(button.dataset.lang === language));
+      });
+      document.getElementById('practice-panel').setAttribute('aria-label', strings.panelAria);
+      document.querySelector('.brand').setAttribute('aria-label', strings.homeAria);
+      navigation.setAttribute('aria-label', strings.navAria);
+      document.querySelector('.languages').setAttribute('aria-label', strings.languageAria);
+      updateMenuLabel();
+      try { localStorage.setItem('markPortfolioLanguage', language); localStorage.setItem('language', language); } catch (error) {}
+    }
+    document.querySelectorAll('[data-lang]').forEach(function(button) {
+      button.addEventListener('click', function() { setLanguage(button.dataset.lang); });
+    });
+    menuButton.addEventListener('click', function() {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      navigation.classList.toggle('open', !isOpen);
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      updateMenuLabel();
+    });
+    navigation.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', closeMenu);
+    });
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+        closeMenu();
+        menuButton.focus();
+      }
+    });
+    try {
+      const savedLanguage = localStorage.getItem('language') || localStorage.getItem('markPortfolioLanguage');
+      setLanguage(savedLanguage === 'et' ? 'et' : 'en');
+    } catch (error) { setLanguage('en'); }
+  </script>
 </body>
 </html>
