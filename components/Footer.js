@@ -14,9 +14,9 @@ function Footer() {
             <div>
               <h3 className="text-xl font-bold mb-4">Kiirlingid</h3>
               <ul className="space-y-2">
-                <li><button onClick={() => document.getElementById('home').scrollIntoView({ behavior: 'smooth' })} className="text-gray-400 hover:text-white transition-colors">Avaleht</button></li>
-                <li><button onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })} className="text-gray-400 hover:text-white transition-colors">Minust</button></li>
-                <li><button onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })} className="text-gray-400 hover:text-white transition-colors">Kontakt</button></li>
+                <li><a href="index.html#home" className="text-gray-400 hover:text-white transition-colors">Avaleht</a></li>
+                <li><a href="index.html#about" className="text-gray-400 hover:text-white transition-colors">Minust</a></li>
+                <li><a href="index.html#contact" className="text-gray-400 hover:text-white transition-colors">Kontakt</a></li>
               </ul>
             </div>
             
