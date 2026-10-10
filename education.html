@@ -1,33 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Haridus - Portfoolio</title> 
-    <meta name="description" content="Akadeemiline taust ja haridustagatised">
-    <meta name="keywords" content="haridus, akadeemiline, kvalifikatsioonid, kraadid">
-    
-    <meta property="og:title" content="Haridus - Portfoolio">
-    <meta property="og:description" content="Akadeemiline taust ja haridustagatised">
-    
-    <meta name="twitter:title" content="Haridus - Portfoolio">
-    <meta name="twitter:description" content="Akadeemiline taust ja haridustagatised">
-    
-    <meta name="google-site-verification" content="L7gjPSlhc4rs_Kj7KzRjx4UMJ1YwRpG8gIzLeZ7ydDU">
-
-    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
-    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
-        <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
-    <link href="dist/tailwind.css" rel="stylesheet">
-
-</head>
-<body>
-    <div id="root"></div>
-    <script type="text/babel" src="components/Header.js"></script>
-    <script type="text/babel" src="components/EducationContent.js"></script>
-    <script type="text/babel" src="components/Footer.js"></script>
-    <script type="text/babel" src="education-app.js"></script>
-</body>
-</html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#17352b">
+<title>Education — Mark Grintšin</title><meta name="description" content="I study IT systems at Rakvere Ametikool and develop my skills through school labs and personal projects."><link rel="canonical" href="https://mark123601.github.io/Portfoolio/education.html"><link rel="stylesheet" href="portfolio.css"><script src="portfolio.js" defer></script></head>
+<body data-title-key="educationPageTitle"><a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html#home" aria-label="Mark Grintšin home"><span class="monogram">MG</span><span>Mark Grintšin</span></a>
+      <div class="header-controls">
+        <nav id="navigation" aria-label="Main navigation">
+          <a href="index.html#home" data-i18n="navHome">Home</a>
+          <a href="index.html#about" data-i18n="navAbout">About me</a>
+          <a href="index.html#projects" data-i18n="navProjects">Projects</a>
+          <a href="index.html#skills" data-i18n="navSkills">Skills</a>
+          <a href="education.html" data-i18n="navEducation" aria-current="page">Education</a>
+          <a href="documents.html" data-i18n="navDocuments">Documents</a>
+          <a href="koodilehekulg.html" data-i18n="navResources">IT links</a>
+          <a href="index.html#contact" data-i18n="navContact">Contact</a>
+        </nav>
+        <div class="languages" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true" aria-label="English">EN</button>
+          <button type="button" data-lang="et" aria-pressed="false" aria-label="Eesti">ET</button>
+        </div>
+        <button class="menu-button" type="button" aria-controls="navigation" aria-expanded="false" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+<main id="main"><section class="page-hero container"><a class="back-link" href="index.html#home"><span aria-hidden="true">← </span><span data-i18n="backHome">Back to home</span></a>
+<div class="eyebrow" data-i18n="educationEyebrow">My background</div><h1 data-i18n="educationPageTitleVisible">My education.</h1><p class="page-intro" data-i18n="educationIntro">I study IT systems at Rakvere Ametikool and develop my skills through school labs and personal projects.</p></section>
+<section class="page-education container" id="education" aria-labelledby="education-title">
+      <div class="education-layout">
+        <div>
+          <div class="eyebrow" data-i18n="educationEyebrow">My background</div>
+          <h2 class="section-title" id="education-title" data-i18n="educationTitle">Learning IT systems.</h2>
+          <div class="language-block"><strong data-i18n="languagesTitle">Languages</strong><span data-i18n="languagesDescription">Estonian, Russian and English: good proficiency, self-assessed.</span></div>
+        </div>
+        <div>
+          <div class="education-item">
+            <div><h3>Rakvere Ametikool</h3><p data-i18n="educationProgramme">IT Systems Junior Specialist programme</p><p data-i18n="educationLocation">Rakvere, Estonia · Group IT25</p></div>
+            <time data-i18n="educationPeriod">2025 — present</time>
+          </div>
+          <div class="education-item">
+            <div><h3>Rakvere Reaalkool</h3><p data-i18n="basicEducation">Basic education completed</p><p data-i18n="basicLocation">Rakvere, Estonia</p></div>
+            <time>2016 — 2025</time>
+          </div>
+        </div>
+      </div>
+    </section><section class="page-content container"><div class="about-layout"><div><h2 class="section-title" data-i18n="learningAreasTitle">What I am learning</h2><p class="page-intro" data-i18n="learningAreasIntro">The practical areas I work on as part of my studies.</p></div><div><ul class="learning-list"><li data-i18n="learningWindows">Windows administration and PowerShell</li><li data-i18n="learningNetworking">Network configuration with Cisco Packet Tracer</li><li data-i18n="learningHardware">PC hardware and troubleshooting</li><li data-i18n="learningLinux">Linux and Bash with guidance</li><li data-i18n="learningProgramming">Introductory Python and programming</li></ul><div class="actions"><a class="button primary" href="index.html#projects" data-i18n="viewProjects">Explore practical projects</a><a class="button secondary" href="documents.html" data-i18n="navDocuments">Documents</a></div></div></div></section></main>  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 Mark Grintšin</span>
+      <div class="footer-links">
+        <a href="education.html" data-i18n="navEducation">Education</a>
+        <a href="documents.html" data-i18n="schoolDocuments">School documents</a>
+        <a href="koodilehekulg.html" data-i18n="itResources">IT resources</a>
+        <a href="https://github.com/mark123601" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="assets/CV_Mark_Grintsin_EN.docx" download data-i18n="wordCv">CV in Word</a>
+        <a href="#main" data-i18n="backTop">Back to top ↑</a>
+      </div>
+    </div>
+  </footer></body></html>

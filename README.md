@@ -13,24 +13,28 @@ Last updated: 10 October 2026
 - PC repair, a Minecraft server project with a friend, and PowerShell school coursework.
 - Skills described through practical experience rather than percentage scores.
 - Education, contact links and downloadable English CV files in PDF and Word formats.
+- One shared top navigation across all pages, including Home, About me, Projects, Skills, Education, Documents, IT links and Contact.
 - Responsive navigation, keyboard focus styles and expandable project descriptions.
+- Matching forest green and cream styling across the main page, education, documents and all 18 existing IT resource links.
 
-The main page is a self-contained static `index.html`. It uses system fonts and inline CSS and JavaScript; no installation or build step is needed for it. All asset links are relative so it works at the GitHub Pages project path `/Portfoolio/`.
+All four pages are static HTML and share `portfolio.css` and `portfolio.js`. They use system fonts; no installation, third-party runtime or build step is needed. All asset links are relative so it works at the GitHub Pages project path `/Portfoolio/`.
 
 ## Documents and existing pages
 
 - `assets/CV_Mark_Grintsin_EN.pdf` and `assets/CV_Mark_Grintsin_EN.docx` are the current CV downloads.
 - `dokumendid/cv_Mark_IT25.pdf` contains the same updated PDF to preserve existing CV links.
 - `documents.html`, `education.html` and `koodilehekulg.html` remain available, together with the existing school documents.
-- The existing supplementary pages still use React, Babel and the prebuilt `dist/tailwind.css`. See `README_TAILWIND_BUILD.md` when editing their component classes.
+- All supplementary pages now share the main page design and language preference. Documents open directly as PDFs; the current CV also downloads as Word.
+- The earlier React components and Tailwind files are retained as legacy source but are not loaded by the active pages.
 
 ## Editing
 
-1. Edit the visible default English text and both `translations.en` and `translations.et` objects in `index.html` together.
-2. Keep claims, project contributions and skill descriptions accurate.
-3. Replace both CV downloads when contact details or availability change. Also replace `dokumendid/cv_Mark_IT25.pdf` with the updated PDF.
-4. Keep the existing Google site verification meta tag and canonical GitHub Pages URL.
-5. Check language switching, mobile navigation, project expansion, local links and CV downloads before publishing.
+1. Edit the visible default English text in the appropriate HTML page and both English and Estonian dictionaries in `portfolio.js` together.
+2. Edit `portfolio.css` to update the shared design across all pages.
+3. Keep claims, project contributions and skill descriptions accurate.
+4. Replace both CV downloads when contact details or availability change. Also replace `dokumendid/cv_Mark_IT25.pdf` with the updated PDF.
+5. Keep the existing Google site verification meta tag and canonical GitHub Pages URL.
+6. Check language switching, mobile navigation, project expansion, local links and CV downloads before publishing.
 
 For a local preview, run `python3 -m http.server 8000` in the repository and open `http://localhost:8000/`.
 
